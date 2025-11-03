@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+src/__init__.py
+src/cli.py
+src/discovery.py
+src/exporters.py
+src/extractor.py
+src/fetcher.py
+src/models.py
+src/summarizer.py
+src/research_agent.egg-info/PKG-INFO
+src/research_agent.egg-info/SOURCES.txt
+src/research_agent.egg-info/dependency_links.txt
+src/research_agent.egg-info/entry_points.txt
+src/research_agent.egg-info/requires.txt
+src/research_agent.egg-info/top_level.txt

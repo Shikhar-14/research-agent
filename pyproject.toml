@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-agent"
+version = "0.1.0"
+description = "Web scouting + structured fact extraction for explainers"
+requires-python = ">=3.10"
+dependencies = [
+  "httpx>=0.27",
+  "beautifulsoup4>=4.12",
+  "trafilatura>=1.7.0",
+  "pydantic>=2.7",
+  "python-dotenv>=1.0",
+  "typer>=0.12",
+  "PyYAML>=6.0.1",
+  "pandas>=2.2",
+  "markdownify>=0.12.1",
+]
+
+[project.scripts]
+research-agent = "src.cli:app"

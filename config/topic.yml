@@ -1,0 +1,31 @@
+topic: "India’s undersea cable dependencies"
+scope:
+  date_from: "2018-01-01"
+  date_to: "2025-11-03"
+
+discovery:
+  provider: "tavily"
+  queries:
+    - "India submarine cable landing stations list site:wikipedia.org"
+    - "India submarine cable outages 2023 2024"
+    - "site:trai.gov.in submarine cable"
+    - "site:mea.gov.in cable landing station"
+    - "site:dot.gov.in cable landing guidelines"               # no search key required             # example press release
+  include_domains: []            # leave empty to avoid filtering by domain
+  exclude_domains: ["reddit.com","quora.com","pinterest.com"]            # nothing excluded
+
+fetch:
+  obey_robots_txt: true
+  max_pages_per_domain: 15
+
+extraction:
+  strict_json: true
+  fields: ["title","published_at","author","entities","claims","numbers","quotes","language"]
+
+summarization:
+  style: "neutral, bullet-first"
+
+outputs:
+  dossier_md: "out/dossier.md"
+  facts_csv: "out/facts.csv"
+  timeline_csv: "out/timeline.csv"
